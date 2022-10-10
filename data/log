@@ -1,0 +1,11 @@
+Replicas                              1
+Cores per replica                     1
+Number of steps                       300000
+Timestep                              0.002000
+Temperature                           1.000000
+Friction                              10.000000
+Random seed                           -4525
+Dimensions                            1
+Basis Function 1                      BF_GAUSSIANS ORDER=14 WIDTH=1.3 MINIMUM=-8.4 MAXIMUM=+8.4
+PLUMED input                          plumed.dat
+kBoltzmann taken as 1, use NATURAL_UNITS in the plumed input

@@ -1,0 +1,17 @@
+# vim:ft=plumed
+p: POSITION ATOM=1
+ene: ENERGY
+
+METAD ...
+ LABEL=metad
+ ARG=p.x
+ SIGMA=0.25
+ HEIGHT=0.1
+ PACE=300
+ GRID_MIN=-8.4
+ GRID_MAX=8.4
+ GRID_BIN=300
+ CALC_RCT
+... METAD
+
+PRINT ARG=p.x,ene,metad.* FILE=colvar.data STRIDE=100 FMT=%8.4f

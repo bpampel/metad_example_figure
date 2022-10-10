@@ -1,0 +1,5 @@
+# vim:ft=plumed
+p: POSITION ATOM=1
+ene: ENERGY
+
+PRINT ARG=p.x,ene FILE=colvar.data STRIDE=100 FMT=%8.4f

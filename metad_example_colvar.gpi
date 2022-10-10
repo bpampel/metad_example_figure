@@ -1,0 +1,23 @@
+#!/usr/bin/env gnuplot
+
+load "~/scripts/gnuplot/style/pdf.gpi"
+call "~/scripts/gnuplot/style/colors.gpi" "5"
+
+graymax=320
+graystride=20
+yoffset=17
+
+set yr [-6:7.5]
+set xr [0:2000]
+set output "metad_example_colvar.pdf"
+
+set xlabel "Deposited Gaussians"
+set ylabel "s"
+
+metad_pace=300
+dt=0.01
+x_scaling=1/(dt*metad_pace)
+
+
+set key off
+pl 'data/colvar.data' u ($1*x_scaling):2 w l lw 1
